@@ -51,7 +51,7 @@ const ConstructorPage = () => {
         </TabList>
 
         <TabPanel>
-          <Restaurants />
+          <Restaurants restaurants={[{ name: 'lala' }, { name: 'gfdgf' }]} />
         </TabPanel>
         <TabPanel>
           <ToastMasters />

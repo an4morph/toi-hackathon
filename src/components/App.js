@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
-import { injectGlobal} from 'styled-components'
+import { injectGlobal } from 'styled-components'
 import 'flexboxgrid/dist/flexboxgrid.min.css'
 
 import { HomePage, ConstructorPage } from 'components'
