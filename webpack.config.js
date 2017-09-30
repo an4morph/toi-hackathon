@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const devServer = require('@webpack-blocks/dev-server2')
 const splitVendor = require('webpack-blocks-split-vendor')
 const happypack = require('webpack-blocks-happypack')
+const Dotenv = require('dotenv-webpack')
 
 const {
   addPlugins, createConfig, entryPoint, env, setOutput,
@@ -12,6 +13,7 @@ const {
 
 const host = process.env.HOST || 'localhost'
 const port = process.env.PORT || 3000
+const allowedHosts = [process.env.ALLOWED_HOSTS || 'localhost']
 const sourceDir = process.env.SOURCE || 'src'
 const publicPath = `/${process.env.PUBLIC_PATH || ''}/`.replace('//', '/')
 const sourcePath = path.join(process.cwd(), sourceDir)
@@ -29,6 +31,7 @@ const assets = () => () => ({
   module: {
     rules: [
       { test: /\.(png|jpe?g|svg|woff2?|ttf|eot)$/, loader: 'url-loader?limit=8000' },
+      { test: /\.css$/, loader: 'style-loader!css-loader', include: /flexboxgrid/ },
     ],
   },
 })
@@ -73,9 +76,14 @@ const config = createConfig([
       headers: { 'Access-Control-Allow-Origin': '*' },
       host,
       port,
+      allowedHosts,
     }),
     sourceMaps(),
     addPlugins([
+      new Dotenv({
+        path: './../.env',
+        safe: false,
+      }),
       new webpack.NamedModulesPlugin(),
     ]),
   ]),
@@ -83,6 +91,10 @@ const config = createConfig([
   env('production', [
     splitVendor(),
     addPlugins([
+      new Dotenv({
+        path: './../.env',
+        safe: false,
+      }),
       new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false } }),
     ]),
   ]),

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
+import 'flexboxgrid/dist/flexboxgrid.min.css'
 
 import { HomePage, ConstructorPage } from 'components'
 
