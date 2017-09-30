@@ -20,8 +20,12 @@ class ShowProgram extends React.Component {
     this.setState({ showName: e.target.value })
   }
 
-  handleCapacityChange(e) {
-    this.setState({ capacity: e.target.value })
+  handlePriceBeforeChange(e) {
+    this.setState({ priceBefore: e.target.value })
+  }
+
+  handlePriceAfterChange(e) {
+    this.setState({ priceAfter: e.target.value })
   }
 
   componentWillMount() {
