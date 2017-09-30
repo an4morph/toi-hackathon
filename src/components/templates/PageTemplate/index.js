@@ -5,7 +5,7 @@ import { Header, Footer } from 'components'
 const PageTemplate = ({ header, children, footer, ...props }) => {
   return (
     <div {...props}>
-      <Header>{header}</Header>
+      {header}
       {children}
       <Footer>{footer}</Footer>
     </div>

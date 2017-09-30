@@ -1,9 +1,16 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
+import { injectGlobal} from 'styled-components'
 
 import { HomePage, ConstructorPage } from 'components'
 
+injectGlobal`
+  html,body{
+    overflow-x:hidden;
+    margin:0
+  }
+`
 
 const App = () => {
   return (
