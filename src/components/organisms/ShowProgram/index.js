@@ -12,12 +12,25 @@ injectGlobal`
 class ShowProgram extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { showName: '', capacity: '' }
-    this.handleNameChange = this.handleNameChange.bind(this)
+    this.state = {
+      liveBand: true,
+      vocalists: true,
+      dancers: true,
+      otherShows: true,
+      priceBefore: '',
+      priceAfter: '',
+    }
+    this.handleShowTypeCheck = this.handleShowTypeCheck.bind(this)
+    this.handlePriceBeforeChange = this.handlePriceBeforeChange.bind(this)
+    this.handlePriceAfterChange = this.handlePriceAfterChange.bind(this)
   }
 
-  handleNameChange(e) {
-    this.setState({ showName: e.target.value })
+  componentWillMount() {
+    this.props.fetchShowProgramRequest()
+  }
+
+  handleShowTypeCheck(e) {
+    this.setState({ [`${e.target.name}`]: !this.state[`${e.target.name}`] })
   }
 
   handlePriceBeforeChange(e) {
@@ -28,18 +41,24 @@ class ShowProgram extends React.Component {
     this.setState({ priceAfter: e.target.value })
   }
 
-  componentWillMount() {
-    this.props.fetchShowProgramRequest()
-  }
-
   render() {
+    console.log(this.state)
     return (
       <div className="block">
         <form className="filter">
-          <p>Название шоу группы итд</p>
-          <input placeholder="название" onChange={this.handleNameChange} />
-          <p>Еще какая-то фигня</p>
-          <input placeholder="еще какая-то фигня" onChange={this.handleCapacityChange} />
+          <div className="show-type-block">
+            <p>Язык</p>
+            <input type="checkbox" name="liveBand" onChange={this.handleShowTypeCheck} checked={this.state.liveBand} />Живая музыка
+            <input type="checkbox" name="vocalists" onChange={this.handleShowTypeCheck} checked={this.state.vocalists} />Певцы
+            <input type="checkbox" name="dancers" onChange={this.handleShowTypeCheck} checked={this.state.dancers} />Танцевальные группы
+            <input type="checkbox" name="otherShows" onChange={this.handleShowTypeCheck} checked={this.state.otherShows} />Разное
+          </div>
+          <div className="price-block">
+            <p>Цена от </p>
+            <input type="number" onChange={this.handlePriceBeforeChange} />
+            <p>до</p>
+            <input type="number" onChange={this.handlePriceAfterChange} />
+          </div>
         </form>
       </div>
     )

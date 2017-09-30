@@ -44,7 +44,6 @@ class ToastMasters extends React.Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="block">
         <form className="filter">
