@@ -6,7 +6,7 @@ import {fetchPhotoVideoSuccess} from './actions'
 export function* fetchPhotoVideo() {
   const apiResponse = yield call(
     axios.get,
-    'link'
+    'http://localhost:8000/api/v1/photovideo/'
   )
   yield put(fetchPhotoVideoSuccess(apiResponse.data))
 }

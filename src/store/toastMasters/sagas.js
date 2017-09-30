@@ -5,7 +5,7 @@ import {fetchToastMastersSuccess} from './actions'
 export function* fetchToastMasters() {
   const apiResponse = yield call(
     axios.get,
-    'link'
+    'http://localhost:8000/api/v1/toastmaster/'
   )
   yield put(fetchToastMastersSuccess(apiResponse.data))
 }
