@@ -54,13 +54,13 @@ const ConstructorPage = () => {
           <Restaurants restaurants={[{ name: 'lala' }, { name: 'gfdgf' }]} />
         </TabPanel>
         <TabPanel>
-          <ToastMasters />
+          <ToastMasters toastmasters={[{ name: 'lafdfdla' }, { name: 'fdsfdfdf' }]} />
         </TabPanel>
         <TabPanel>
-          <ShowProgram />
+          <ShowProgram showProgramms={[{ name: 'fdsfdf' }, { name: '2121' }]} />
         </TabPanel>
         <TabPanel>
-          <PhotoVideo />
+          <PhotoVideo photoVideos={[{ name: '45345' }, { name: 'fdsfbbbbbb' }]} />
         </TabPanel>
       </Tabs>
     </PageTemplate>
