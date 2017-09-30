@@ -1,6 +1,5 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
-// import { RestarauntResult } from 'components'
 
 injectGlobal`
   .filter {
@@ -77,8 +76,8 @@ class Restaurants extends React.Component {
     })
   }
 
-
   render() {
+    console.log(this.state.priceBefore)
     return (
       <div className="block">
         <form className="filter">
@@ -90,9 +89,11 @@ class Restaurants extends React.Component {
             <p>Количество гостей</p>
             <select onChange={this.handleCapacityChange}>
               <option>Любое</option>
-              <option>до 50</option>
               <option>100</option>
-              <option>500 и более</option>
+              <option>200</option>
+              <option>300</option>
+              <option>400</option>
+              <option>500</option>
             </select>
           </div>
           <div className="price-block">
