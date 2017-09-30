@@ -6,6 +6,11 @@ injectGlobal`
   display: block;
 }
 .service-header{
+  margin-bottom: 100px;
+  text-align: center;
+}
+.service-card-header{
+  margin-bottom: 20px;
   text-align: center;
 }
 .service-content{
@@ -24,6 +29,10 @@ injectGlobal`
 .decription{
   width:250px;
 }
+.service-content img{
+  width:100px;
+  height:100px;
+}
 `
 const Service = () => {
   return (
@@ -33,8 +42,8 @@ const Service = () => {
       </div>
       <div className='service-content'>
         <div className='service-card'>
-          <div className='service-header'>
-            <img src="" alt="" />
+          <div className='service-card-header'>
+            <img src="icon1.svg" alt="" />
             <h4>Секономим время</h4>
           </div>
           <div className="decription">
@@ -43,8 +52,8 @@ const Service = () => {
           </div>
         </div>
         <div className='service-card'>
-          <div className='service-header'>
-            <img src="" alt="" />
+          <div className='service-card-header'>
+            <img src="icon2.svg" alt="" />
             <h4>Информация со всего Кыргызстана</h4>
           </div>
           <div className="decription">
@@ -53,8 +62,8 @@ const Service = () => {
           </div>
         </div>
         <div className='service-card'>
-          <div className='service-header'>
-            <img src="" alt="" />
+          <div className='service-card-header'>
+            <img src="icon3.svg" alt="" />
             <h4>Еще одня иконка</h4>
           </div>
           <div className="decription">
