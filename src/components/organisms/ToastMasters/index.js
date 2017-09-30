@@ -43,6 +43,12 @@ class ToastMasters extends React.Component {
     this.props.fetchToastMastersRequest()
   }
 
+  filterItems(data, state) {
+    return data.filter((item) => {
+      return item.name.toLowerCase().indexOf(state.toastName) !== -1
+    })
+  }
+
   render() {
     return (
       <div className="block">
@@ -67,6 +73,14 @@ class ToastMasters extends React.Component {
         <div className="results">
           {
             this.props.toastmasters.map((item, index) => {
+              return (<div key={index}>
+                <h3>{item.name}</h3>
+                тут картинка
+              </div>)
+            })
+          }
+          {
+            this.filterItems(this.props.toastmasters, this.state).map((item, index) => {
               return (<div key={index}>
                 <h3>{item.name}</h3>
                 тут картинка

@@ -67,7 +67,13 @@ class Restaurants extends React.Component {
   }
 
   componentWillMount() {
-    // this.props.fetchResRequest()
+    this.props.fetchResRequest()
+  }
+
+  filterItems(data, state) {
+    return data.filter((item) => {
+      return item.name.toLowerCase().indexOf(state.restaurantName) !== -1
+    })
   }
 
   render() {
@@ -99,7 +105,7 @@ class Restaurants extends React.Component {
         </form>
         <div className="results">
           {
-            this.props.restaurants.map((item, index) => {
+            this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (<div key={index}>
                 <h3>{item.name}</h3>
                 тут картинка
