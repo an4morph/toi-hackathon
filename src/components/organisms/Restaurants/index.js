@@ -59,7 +59,13 @@ class Restaurants extends React.Component {
     this.setState({ priceAfter: e.target.value })
   }
 
+  componentWillMount() {
+    console.log('kek')
+    this.props.fetchResRequest()
+  }
+
   render() {
+    console.log(this.props)
     return (
       <div className="block">
         <form className="filter">
