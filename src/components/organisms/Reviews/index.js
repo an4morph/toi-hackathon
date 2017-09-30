@@ -2,6 +2,11 @@ import React from 'react'
 import { injectGlobal} from 'styled-components'
 
 injectGlobal`
+  .reviews{
+    height:auto;
+    padding-top:50px;
+    background-color: #e1e1e1;
+  }
   .reviews-content-card-header>h4{
     margin:10px;
     height:0;
@@ -13,8 +18,13 @@ injectGlobal`
     height: 300px;
   }
   .reviews-content-card-decription{
-    width: auto;
+    max-width: 250px;
+    margin:0 auto;
     text-align: center;
+  }
+  .content{
+    padding-top:50px;
+    padding-bottom: 50px;
   }
   .center{
     text-align:center;
@@ -48,14 +58,14 @@ injectGlobal`
 `
 const Service = () => {
   return (
-    <div className='col-sm-12 col-lg-12 col-xs-12'>
+    <div className='col-sm-12 col-lg-12 col-xs-12 reviews'>
       <div className='container'>
         <div className='row'>
           <div className='col-sm-12 col-lg-12 col-xs-12 left'>
             <h1>Последние комментарии</h1>
             <hr></hr>
           </div>
-          <div className='col-xs-12 col-sm-12 col-lg-12'>
+          <div className='col-xs-12 col-sm-12 col-lg-12 content'>
             <div className='container'>
               <div className='row'>
                 <div className='col-lg-3 col-xs-12 col-sm-6'>
