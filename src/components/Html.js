@@ -4,21 +4,13 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 
-const style = {
-  wrap: {
-    overflowX: 'hidden',
-  },
-  wrapb: {
-    margin: '0',
-  },
-}
 const Html = ({ styles, assets, state, content }) => {
   const helmet = Helmet.renderStatic()
   const htmlAttrs = helmet.htmlAttributes.toComponent()
   const bodyAttrs = helmet.bodyAttributes.toComponent()
 
   return (
-    <html lang="en" style={style.wrap}{...htmlAttrs}>
+    <html lang="en" {...htmlAttrs}>
       <head>
         {helmet.title.toComponent()}
         {helmet.meta.toComponent()}
@@ -26,7 +18,7 @@ const Html = ({ styles, assets, state, content }) => {
         {assets.css.map(path => <link rel="stylesheet" type="text/css" key={path} href={path} />)}
         {styles}
       </head>
-      <body style={style.wrapb} {...bodyAttrs}>
+      <body {...bodyAttrs}>
         <main id="app" dangerouslySetInnerHTML={{ __html: content }} />
         <script dangerouslySetInnerHTML={{ __html: state }} />
         {assets.js.map(path => <script key={path} src={path} />)}

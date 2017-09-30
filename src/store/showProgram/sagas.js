@@ -6,7 +6,7 @@ import {fetchShowProgramSuccess} from './actions'
 export function* fetchShowProgram() {
   const apiResponse = yield call(
     axios.get,
-    'link'
+    'http://localhost:8000/api/v1/showprogram/'
   )
   yield put(fetchShowProgramSuccess(apiResponse.data))
 }
