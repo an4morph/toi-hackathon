@@ -21,6 +21,10 @@ class ToastMasters extends React.Component {
     this.setState({ capacity: e.target.value })
   }
 
+  componentWillMount() {
+    this.props.fetchToastMastersRequest()
+  }
+
   render() {
     return (
       <div className="block">

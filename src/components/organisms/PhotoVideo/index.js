@@ -21,6 +21,10 @@ class PhotoVideo extends React.Component {
     this.setState({ capacity: e.target.value })
   }
 
+  componentWillMount() {
+    this.props.fetchPhotoVideoRequest()
+  }
+
   render() {
     return (
       <div className="block">

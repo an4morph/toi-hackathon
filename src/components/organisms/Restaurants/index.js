@@ -60,12 +60,10 @@ class Restaurants extends React.Component {
   }
 
   componentWillMount() {
-    console.log('kek')
     this.props.fetchResRequest()
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="block">
         <form className="filter">

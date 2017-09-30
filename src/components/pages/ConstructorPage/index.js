@@ -5,12 +5,14 @@ import {
   PageTemplate,
   Header,
   Footer,
-  ToastMasters,
-  ShowProgram,
-  PhotoVideo,
 } from 'components'
 
-import { Restaurants } from 'containers'
+import {
+  Restaurants,
+  ToastMasters,
+  ShowProgram,
+  PhotoVideo
+ } from 'containers'
 
 injectGlobal`
   .tab {
