@@ -28,13 +28,17 @@ const style = {
   }
 }
 
-const Slider = () => {
+const Slider = ({onClickNext, onClickPrev}) => {
   return (
     <div style={style.header}>
       <div style={style.text}>
         <h2>Популярное</h2>
       </div>
       <div style={style.content}>
+        <div onClick={e => {
+          e.preventDefault()
+          onClickPrev()
+        }}>{'<'}</div>
         <div style={style.card}>
           <p>Популярное</p>
         </div>
@@ -50,6 +54,10 @@ const Slider = () => {
         <div style={style.card}>
           <p>Популярное</p>
         </div>
+        <div onClick={e =>{
+          e.preventDefault()
+          onClickPrev()
+        }}>{'>'}</div>
       </div>
     </div>
   )
