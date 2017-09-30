@@ -5,11 +5,12 @@ import {
   PageTemplate,
   Header,
   Footer,
-  Restaurants,
   ToastMasters,
   ShowProgram,
   PhotoVideo,
 } from 'components'
+
+import { Restaurants } from 'containers'
 
 injectGlobal`
   .tab {
@@ -51,7 +52,7 @@ const ConstructorPage = () => {
         </TabList>
 
         <TabPanel>
-          <Restaurants restaurants={[{ name: 'lala' }, { name: 'gfdgf' }]} />
+          <Restaurants />
         </TabPanel>
         <TabPanel>
           <ToastMasters toastmasters={[{ name: 'lafdfdla' }, { name: 'fdsfdfdf' }]} />

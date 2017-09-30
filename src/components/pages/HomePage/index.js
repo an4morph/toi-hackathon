@@ -1,7 +1,7 @@
 // https://github.com/diegohaz/arc/wiki/Atomic-Design
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { PageTemplate, Footer, Banner} from 'components'
+import { PageTemplate, Footer, Banner, Service} from 'components'
 
 const HomePage = () => {
   return (
@@ -14,6 +14,7 @@ const HomePage = () => {
           <Link to={'/construct'}>
             <button>go to construct</button>
           </Link>
+          <Service />
         </div>
       </div>
     </PageTemplate>
