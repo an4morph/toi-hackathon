@@ -24,6 +24,10 @@ class ShowProgram extends React.Component {
     this.setState({ capacity: e.target.value })
   }
 
+  componentWillMount() {
+    this.props.fetchShowProgramRequest()
+  }
+
   render() {
     return (
       <div className="block">

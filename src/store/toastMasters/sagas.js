@@ -15,7 +15,7 @@ export function* fetchToastMasters() {
 export function* fetchToastMastersRequest() {
   while (true) {
     const {} = yield take('FETCH_TOASTMASTERS_REQUEST')
-    yield call(fetchTamada)
+    yield call(fetchToastMasters)
   }
 }
 

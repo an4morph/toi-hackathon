@@ -39,8 +39,16 @@ injectGlobal`
 class Restaurants extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { restaurantName: '', capacity: '', priceBefore: '', priceAfter: '' }
+    this.state = {
+      restaurantName: '',
+      capacity: 'Любое',
+      priceBefore: '',
+      priceAfter: '',
+    }
     this.handleNameChange = this.handleNameChange.bind(this)
+    this.handleCapacityChange = this.handleCapacityChange.bind(this)
+    this.handlePriceBeforeChange = this.handlePriceBeforeChange.bind(this)
+    this.handlePriceAfterChange = this.handlePriceAfterChange.bind(this)
   }
 
   handleNameChange(e) {
@@ -59,6 +67,31 @@ class Restaurants extends React.Component {
     this.setState({ priceAfter: e.target.value })
   }
 
+  componentWillMount() {
+    // this.props.fetchResRequest()
+  }
+
+  filterItems(data, state) {
+    return data.filter((item) => {
+      return item.name.toLowerCase().indexOf(state.restaurantName) !== -1
+    })
+  }
+
+  mockData = [{
+    name: 'KEK',
+    kitchen: ['evro'],
+    size: 200,
+    cost_per_person: null,
+    additional_service: [],
+  },
+  {
+    name: 'AHMED',
+    kitchen: ['kyrgyz'],
+    size: 400,
+    cost_per_person: null,
+    additional_service: [],
+  }]
+
   render() {
     return (
       <div className="block">
@@ -70,7 +103,8 @@ class Restaurants extends React.Component {
           <div className="capacity-block">
             <p>Количество гостей</p>
             <select onChange={this.handleCapacityChange}>
-              <option>до 500</option>
+              <option>Любое</option>
+              <option>до 50</option>
               <option>100</option>
               <option>500 и более</option>
             </select>
@@ -84,8 +118,8 @@ class Restaurants extends React.Component {
         </form>
         <div className="results">
           {
-            this.props.restaurants.map((item) => {
-              return (<div>
+            this.filterItems(this.mockData, this.state).map((item, index) => {
+              return (<div key={index}>
                 <h3>{item.name}</h3>
                 тут картинка
               </div>)

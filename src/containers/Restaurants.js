@@ -1,14 +1,14 @@
+import React from 'react'
 import { connect } from 'react-redux';
 import { fetchResRequest } from 'store/actions';
-import { Restaurants }
+import { Restaurants } from 'components'
 
-export const mapDispatchToProps = {
+const mapDispatchToProps = {
   fetchResRequest: fetchResRequest
 }
 
-export const mapStateToProps = state => ({
+const mapStateToProps = state => ({
   restaurants: state.restaurants
 })
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Restaurants)
