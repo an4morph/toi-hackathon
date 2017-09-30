@@ -68,8 +68,29 @@ class Restaurants extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchResRequest()
+    // this.props.fetchResRequest()
   }
+
+  filterItems(data, state) {
+    return data.filter((item) => {
+      return item.name.toLowerCase().indexOf(state.restaurantName) !== -1
+    })
+  }
+
+  mockData = [{
+    name: 'KEK',
+    kitchen: ['evro'],
+    size: 200,
+    cost_per_person: null,
+    additional_service: [],
+  },
+  {
+    name: 'AHMED',
+    kitchen: ['kyrgyz'],
+    size: 400,
+    cost_per_person: null,
+    additional_service: [],
+  }]
 
   render() {
     return (
@@ -97,7 +118,7 @@ class Restaurants extends React.Component {
         </form>
         <div className="results">
           {
-            this.props.restaurants.map((item, index) => {
+            this.filterItems(this.mockData, this.state).map((item, index) => {
               return (<div key={index}>
                 <h3>{item.name}</h3>
                 тут картинка
