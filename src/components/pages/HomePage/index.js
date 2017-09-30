@@ -1,13 +1,14 @@
 // https://github.com/diegohaz/arc/wiki/Atomic-Design
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { PageTemplate, Footer, Banner, Service} from 'components'
+import { PageTemplate, Footer, Banner, Service, SimpleSlider} from 'components'
 
 const HomePage = () => {
   return (
     <PageTemplate header={<Banner />} footer={<Footer />}>
       <div className="row">
         <div className="col-xs-12">
+          <SimpleSlider />
           <div className="center">
             Начните собирать свой праздник
           </div>
