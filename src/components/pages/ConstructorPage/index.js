@@ -1,5 +1,6 @@
 import React from 'react'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs'
+import { injectGlobal } from 'styled-components'
 import {
   PageTemplate,
   Header,
@@ -10,35 +11,41 @@ import {
   PhotoVideo,
 } from 'components'
 
-const style = {
-  tablist: {
-
-  },
-  tabs: {
-    display: 'inline',
-  },
-  tabRestaurants: {
-    display: 'inline-block',
-    height: '45px',
-    backgroundColor: '#fff678',
-  },
-}
+injectGlobal`
+  .tab {
+    padding: 20px;
+    height: 45px;
+  }
+  .tab:hover {
+    cursor: pointer;
+  }
+  ul{
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  .active-tab {
+    background-color: #ff5e4b;
+  }
+`
 
 const ConstructorPage = () => {
   return (
     <PageTemplate header={<Header />} footer={<Footer />}>
-      <Tabs>
+      <Tabs selectedTabClassName="active-tab">
         <TabList className="row">
-          <Tab style={style.tabRestaurants} className="col-xs-3">
+          <Tab className="col-xs-3 tab">
             Рестораны
           </Tab>
-          <Tab style={style.tabs} className="col-xs-3">
+          <Tab className="col-xs-3 tab">
             Ведущие
           </Tab>
-          <Tab style={style.tabs} className="col-xs-3">
+          <Tab className="col-xs-3 tab">
             Шоу программа
           </Tab>
-          <Tab style={style.tabs} className="col-xs-3">
+          <Tab className="col-xs-3 tab">
             Фото Видео
           </Tab>
         </TabList>
