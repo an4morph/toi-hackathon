@@ -79,14 +79,6 @@ class ToastMasters extends React.Component {
               </div>)
             })
           }
-          {
-            this.filterItems(this.props.toastmasters, this.state).map((item, index) => {
-              return (<div key={index}>
-                <h3>{item.name}</h3>
-                тут картинка
-              </div>)
-            })
-          }
         </div>
       </div>
     )
