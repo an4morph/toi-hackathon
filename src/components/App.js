@@ -60,6 +60,12 @@ injectGlobal`
                 .tab img {
                   width: 50px;
                 }
+                .head-pead{
+                  display:grid;
+                }
+                results > .cards, .keks{
+                  display: inline-table;
+                }
               }
             }
           }

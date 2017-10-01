@@ -39,6 +39,9 @@ injectGlobal`
     height:300px;
     margin:45px;
     margin-right:-100px;
+    @media screen and (max-width:500px) {
+        display: inline-table;
+      }
   }
   .cards h3{
     font-size:26px;
@@ -66,6 +69,9 @@ injectGlobal`
   }
   .head-pead {
     display: block;
+    @media screen and (max-width:500px) {
+        display: grid;
+      }
   }
   .filter-noShow {
     display: none;
@@ -80,8 +86,6 @@ injectGlobal`
   }
   .head-pead hr {
     border: 1px solid rgba(0,0,0,.5);
-  }
-  .keks{
   }
 `
 
@@ -136,11 +140,11 @@ class Restaurants extends React.Component {
           <hr />
         </div>
         <form className={this.state.filterShow ? 'filter row' : 'filter-noShow'}>
-          <div className="name-block col-xs-4">
+          <div className="name-block col-xs-4 col-md-12 col-sm-12">
             <p>Имя ресторана</p>
             <input placeholder="имя ресторана" onChange={this.handleNameChange} />
           </div>
-          <div className="capacity-block col-xs-4">
+          <div className="capacity-block col-xs-4 col-md-12 col-sm-12">
             <p>Количество гостей</p>
             <select onChange={this.handleCapacityChange}>
               <option>Любое</option>
@@ -151,7 +155,7 @@ class Restaurants extends React.Component {
               <option>500</option>
             </select>
           </div>
-          <div className="price-block col-xs-4">
+          <div className="price-block col-xs-4 col-md-12 col-sm-12">
             <p>Цена от </p>
             <input type="number" onChange={this.handlePriceBeforeChange} />
             <p>до</p>
