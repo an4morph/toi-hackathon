@@ -21,7 +21,30 @@ injectGlobal`
 const Service = () => {
   return (
     <div className='footer'>
-
+      <div className='numbers'>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+        <p>+4616135487181641</p>
+      </div>
+      <div className='map'>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+        <a href='/'>kek</a>
+      </div>
+      <div className='access'>
+        <p className='left'>@copyright</p>
+        <p className='right'></p>
+      </div>
     </div>
   )
 }

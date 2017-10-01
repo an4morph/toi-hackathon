@@ -7,13 +7,20 @@ injectGlobal`
    display: flex;
    height:auto;
    min-height:1000px;
+   background-color:#fff;
  }
  .results h3{
    height:50px;
  }
 
- .results>.cards{
+ .pre{
    margin:45px;
+   margin-right:-39px;
+   transition:all 1s;
+
+ }
+ .block{
+   background-color:#fff;
  }
 `
 
@@ -90,7 +97,7 @@ class ToastMasters extends React.Component {
         <div className="results">
           {
             this.props.toastmasters.map((item, index) => {
-              return (<div className="cards col-lg-6">
+              return (<div className="cards pre col-lg-6">
                   <img src="nophoto.png" alt="" />
                   <div className="res-decription">
                     <h3>Золотой Дракон</h3>
