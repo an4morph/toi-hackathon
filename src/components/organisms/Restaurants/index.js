@@ -43,7 +43,7 @@ injectGlobal`
   }
   .cards img{
     padding-right:40px;
-    width:370px;
+    width:300px;
     height:300px;
   }
   .res-decription{
