@@ -95,13 +95,13 @@ const ConstructorPage = () => {
           <Restaurants />
         </TabPanel>
         <TabPanel>
-          <ToastMasters toastmasters={[{ name: 'lafdfdla' }, { name: 'fdsfdfdf' }]} />
+          <ToastMasters />
         </TabPanel>
         <TabPanel>
-          <ShowProgram showProgramms={[{ name: 'fdsfdf' }, { name: '2121' }]} />
+          <ShowProgram />
         </TabPanel>
         <TabPanel>
-          <PhotoVideo photoVideos={[{ name: '45345' }, { name: 'fdsfbbbbbb' }]} />
+          <PhotoVideo />
         </TabPanel>
         <TabPanel>
           <div>Тут пока пусто</div>
