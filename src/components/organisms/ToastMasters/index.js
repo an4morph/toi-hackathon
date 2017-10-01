@@ -16,6 +16,7 @@ class ToastMasters extends React.Component {
       kyrgyzLang: false,
       russianLang: false,
       englishLang: false,
+      filterShow: false,
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleLanguageCheck = this.handleLanguageCheck.bind(this)
@@ -52,18 +53,23 @@ class ToastMasters extends React.Component {
   render() {
     return (
       <div className="block">
-        <form className="filter">
-          <div className="name-block">
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
+          Ведущие мероприятий
+          <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
+          <hr />
+        </div>
+        <form className={this.state.filterShow ? 'filter row' : 'filter-noShow'}>
+          <div className="name-block col-xs-4">
             <p>Имя тамады</p>
             <input onChange={this.handleNameChange} />
           </div>
-          <div className="language-block">
+          <div className="language-block col-xs-4">
             <p>Язык</p>
             <input type="checkbox" name="kyrgyz" onChange={this.handleLanguageCheck} checked={this.state.kyrgyzLang} />Кыргызский
             <input type="checkbox" name="russian" onChange={this.handleLanguageCheck} checked={this.state.russianLang} />Русский
             <input type="checkbox" name="english" onChange={this.handleLanguageCheck} checked={this.state.englishLang} />Английский
           </div>
-          <div className="price-block">
+          <div className="price-block col-xs-4">
             <p>Цена от </p>
             <input type="number" onChange={this.handlePriceBeforeChange} />
             <p>до</p>

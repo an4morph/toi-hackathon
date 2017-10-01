@@ -19,6 +19,7 @@ class ShowProgram extends React.Component {
       otherShows: true,
       priceBefore: '',
       priceAfter: '',
+      filterShow: false,
     }
     this.handleShowTypeCheck = this.handleShowTypeCheck.bind(this)
     this.handlePriceBeforeChange = this.handlePriceBeforeChange.bind(this)
@@ -45,15 +46,20 @@ class ShowProgram extends React.Component {
     console.log(this.state)
     return (
       <div className="block">
-        <form className="filter">
-          <div className="show-type-block">
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
+          Шоу программа
+          <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
+          <hr />
+        </div>
+        <form className={this.state.filterShow ? 'filter row' : 'filter-noShow'}>
+          <div className="show-type-block col-xs-6">
             <p>Язык</p>
-            <input type="checkbox" name="liveBand" onChange={this.handleShowTypeCheck} checked={this.state.liveBand} />Живая музыка
-            <input type="checkbox" name="vocalists" onChange={this.handleShowTypeCheck} checked={this.state.vocalists} />Певцы
-            <input type="checkbox" name="dancers" onChange={this.handleShowTypeCheck} checked={this.state.dancers} />Танцевальные группы
-            <input type="checkbox" name="otherShows" onChange={this.handleShowTypeCheck} checked={this.state.otherShows} />Разное
+            <input type="checkbox" name="liveBand" onChange={this.handleShowTypeCheck} checked={this.state.liveBand} /><span style={{ marginRight: '20px' }}>Живая музыка</span>
+            <input type="checkbox" name="vocalists" onChange={this.handleShowTypeCheck} checked={this.state.vocalists} /><span style={{ marginRight: '20px' }}>Певцы</span>
+            <input type="checkbox" name="dancers" onChange={this.handleShowTypeCheck} checked={this.state.dancers} /><span style={{ marginRight: '20px' }}>Танцевальные группы</span>
+            <input type="checkbox" name="otherShows" onChange={this.handleShowTypeCheck} checked={this.state.otherShows} /><span style={{ marginRight: '20px' }}>Разное</span>
           </div>
-          <div className="price-block">
+          <div className="price-block col-xs-6">
             <p>Цена от </p>
             <input type="number" onChange={this.handlePriceBeforeChange} />
             <p>до</p>
