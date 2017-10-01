@@ -163,7 +163,7 @@ class Restaurants extends React.Component {
             {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (
-                <div className="cards keks col-lg-6">
+                <div className="cards keks col-lg-6" key={index}>
                   <img src={item.photo} alt="" />
                   <div className="res-decription">
                     <h3>{item.name}</h3>
