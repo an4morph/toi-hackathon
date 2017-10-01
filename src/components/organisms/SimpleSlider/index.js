@@ -76,7 +76,7 @@ class SimpleSlider extends React.Component {
       <Slider {...settings}>
         <div>
           <h3>
-            <img src="dinner.jpg" alt="" />
+            <img src="slider1.jpg" alt="" />
             <div className="reviews-content-card-star-rt">
               <img src="star.svg" alt="" />
               <img src="star.svg" alt="" />
@@ -86,48 +86,55 @@ class SimpleSlider extends React.Component {
             </div>
           </h3>
         </div>
-        <div><h3><img src="photographer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider2.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
-        <div><h3><img src="singer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider3.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
-        <div><h3><img src="flowers.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider4.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
-        <div><h3><img src="singer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider5.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
-        <div><h3><img src="magicians.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider6.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
-        <div><h3><img src="limousine.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+        <div><h3><img src="slider7.jpg" alt="" />  <div className="reviews-content-card-star-rt">
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
             <img src="star.svg" alt="" />
           </div></h3></div>
+          <div><h3><img src="slider8.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+            </div></h3></div>
       </Slider>
       </div>
     );
