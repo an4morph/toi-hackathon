@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import { injectGlobal } from 'styled-components'
 import 'flexboxgrid/dist/flexboxgrid.min.css'
-import { HomePage, ConstructorPage } from 'components'
+import { HomePage, ConstructorPage, RestaurantCard } from 'components'
 
 injectGlobal`
   html,body{
@@ -26,13 +26,14 @@ const App = () => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <link rel="icon" href="https://arc.js.org/icon.png" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i&amp;subset=cyrillic" rel="stylesheet"  type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i&amp;subset=cyrillic" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
       </Helmet>
       <Switch>
         <Route path="/" component={HomePage} exact />
         <Route path="/construct" component={ConstructorPage} exact />
+        <Route path="/resPage" component={RestaurantCard} exact />
       </Switch>
     </div>
   )
