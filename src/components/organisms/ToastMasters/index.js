@@ -11,7 +11,7 @@ injectGlobal`
    background-color:#fff;
  }
  .results h3{
-   height:50px;
+   height:25px;
  }
 
  .pre{
@@ -99,7 +99,7 @@ class ToastMasters extends React.Component {
           <div className='row'>
           {
             this.props.toastMasters.map((item, index) => {
-              return (<div key={index} className="cards pre col-lg-6">
+              return (<div key={index} className="cards pre col-lg-6 col-md-12 col-xs-12">
                 <img src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>

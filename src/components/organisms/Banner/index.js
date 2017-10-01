@@ -36,8 +36,8 @@ img{
 `
 const Banner = () => {
   return (
-    <div className='header'>
-      <div className='header-text'>
+    <div className='header container-fluid'>
+      <div className='header-text center'>
         <img src="toimaster_raw.svg" alt="" />
         <p>Устрой свой идеальный праздник!</p>
       </div>

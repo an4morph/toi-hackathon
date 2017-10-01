@@ -38,10 +38,11 @@ injectGlobal`
     justify-content:center;
     margin:10px;
     margin-left:30px;
+    margin-top:20px;
   }
   .reviews-content-card-star img{
-    width:13px;
-    height:13px;
+    width:15px;
+    height:15px;
     padding-right:20px;
   }
   .header-center{
@@ -65,7 +66,6 @@ injectGlobal`
   }
   .crs{
     margin-left:0px;
-    margin-top:35px;
   }
   .crs img{
     margin-left:0px;

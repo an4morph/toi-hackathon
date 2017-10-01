@@ -71,7 +71,7 @@ class ShowProgram extends React.Component {
           <div className='row'>
           {
             this.props.showProgram.map((item, index) => {
-              return (<div key={index} className="cards pre col-lg-6">
+              return (<div key={index} className="cards pre col-lg-6 col-md-6 col-xs-12">
                 <img src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>
