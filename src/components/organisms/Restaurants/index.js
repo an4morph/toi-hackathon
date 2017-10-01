@@ -35,8 +35,10 @@ injectGlobal`
   .cards{
     font-family:open-sans;
     display:flex;
-    width:600px;
+    width:650px;
     height:300px;
+    margin:45px;
+    margin-right:-100px;
   }
   .cards h3{
     font-size:26px;
@@ -78,6 +80,10 @@ injectGlobal`
   }
   .head-pead hr {
     border: 1px solid rgba(0,0,0,.5);
+  }
+  .keks{
+    margin:45px;
+    margin-left:53px;
   }
 `
 
@@ -159,7 +165,7 @@ class Restaurants extends React.Component {
           {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (
-                <div className="cards">
+                <div className="cards keks">
                   <img src="nophoto.png" alt="" />
                   <div className="res-decription">
                     <h3>Золотой Дракон</h3>
