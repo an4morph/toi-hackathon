@@ -59,13 +59,13 @@ const ToastMasterCard = ({ ...props }) => {
           </div>
           <hr />
           <div className="restaurant-contacts row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-xs-6">
               <p>{item.type}</p>
               <p>Ведущий мероприятий</p>
             Цена: {item.price}$ за мероприятие<br />
               Телефон: {item.phone}
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-xs-6">
               <img src={item.photo} alt="" />
             </div>
           </div>

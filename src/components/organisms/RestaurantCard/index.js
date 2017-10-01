@@ -97,13 +97,13 @@ const RestaurantCard = ({ ...props }) => {
           </div>
           <hr />
           <div className="restaurant-contacts row">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-xs-12">
               <p>Кухня: Национальная, европейская</p>
             Телефон: {item.phone}
               <br />
             Адрес:{item.address}
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-xs-12">
               <img src={item.photo} alt="" />
             </div>
           </div>
