@@ -62,37 +62,6 @@ injectGlobal`
   }
 `
 
-<<<<<<< HEAD
-const ConstructorPage = () => {
-  return (
-    <PageTemplate footer={<Footer />}>
-      <Tabs selectedTabClassName="active-tab">
-        <TabList className="rows">
-          <div className="col-lg-3 col-md-3 col-xs-3 logo">
-            <Link to="/"><img src="toimaster_small.svg" alt="" /></Link>
-          </div>
-          <Tab className="col-lg-3 col-md-3 col-xs-3 tab">
-            <p>Рестораны</p>
-            <img src="restaurants_icon.svg" alt="" />
-          </Tab>
-          <Tab className="col-lg-3 col-md-3 col-xs-3 tab">
-            <p>Ведущие</p>
-            <img src="showmen_icon.svg" alt="" />
-          </Tab>
-          <Tab className="col-lg-3 col-md-3 col-xs-3 tab">
-            <p>Шоу-программа</p>
-            <img src="shows_icon.svg" alt="" />
-          </Tab>
-          <Tab className="col-lg-3 col-md-3 col-xs-3 tab">
-            <p>Фото/Видеосьемка</p>
-            <img src="videos_icon.svg" alt="" />
-          </Tab>
-          <Tab className="col-lg-3 col-md-3 col-xs-3 tab">
-            <p>Прочее</p>
-            <img src="other_icon.svg" alt="" />
-          </Tab>
-        </TabList>
-=======
 class ConstructorPage extends React.Component {
   constructor(props) {
     super(props)
@@ -129,8 +98,6 @@ class ConstructorPage extends React.Component {
               <img src="other_icon.svg" alt="" />
             </Tab>
           </TabList>
->>>>>>> 33390711dddaaa42fa23909122fd47c1413e0aaa
-
           <TabPanel>
             <Restaurants />
           </TabPanel>
