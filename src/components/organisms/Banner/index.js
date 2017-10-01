@@ -10,7 +10,7 @@ injectGlobal`
   background: -ms-linear-gradient(359deg, #FF913D 0%, #ff5e4b 100%); /* ie10+ */
   background: linear-gradient(91deg, #FF913D 0%, #ff5e4b 100%); /* w3c */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF913D', endColorstr='#ff5e4b',GradientType=1 ); /* ie6-9 */
-  height:450px;
+  height:350px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -25,11 +25,12 @@ img{
   width: 700px;
 }
 .header-text p{
-  padding-top:50px;
+  padding-top:20px;
+  font-size:19px;
 }
 .header img{
   height:100px;
-  width:400px;
+  width:600px;
   font-family:open-sans
 }
 `
@@ -38,13 +39,7 @@ const Banner = () => {
     <div className='header'>
       <div className='header-text'>
         <img src="toimaster_raw.svg" alt="" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-           sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-           ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit
-           in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-           officia deserunt mollit anim id est laborum.</p>
+        <p>Устрой свой идеальный праздник!</p>
       </div>
     </div>
   )

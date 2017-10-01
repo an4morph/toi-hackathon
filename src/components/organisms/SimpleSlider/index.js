@@ -5,12 +5,33 @@ import { injectGlobal } from 'styled-components'
 
 injectGlobal`
   h3{
-    width:300px;
-    height:250px;
+    width:200px;
+    height:200px;
   }
   h3 img{
-    width:300px;
-    height:250px;
+    width:200px;
+    height:200px;
+  }
+  .container-m{
+    margin:0 auto;
+    width:950px;
+  }
+  .reviews-content-card-star-rt{
+    display:flex;
+    justify-content: center;
+    padding-top:10px;
+  }
+  .slick-slider{
+    height: 275px;
+  }
+  .slick-list{
+    height:275px;
+  }
+  .slick-initialized,
+  .slick-slide,
+   .slick-slide,
+   .slick-active{
+    height:274.5px
   }
 `
 
@@ -51,14 +72,64 @@ class SimpleSlider extends React.Component {
       prevArrow: <SamplePrevArrow />
     };
     return (
+      <div className='container-m'>
       <Slider {...settings}>
-        <div><h3><img src="dinner.jpg" alt="" /></h3></div>
-        <div><h3><img src="photographer.jpg" alt="" /></h3></div>
-        <div><h3><img src="singer.jpg" alt="" /></h3></div>
-        <div><h3><img src="flowers.jpg" alt="" /></h3></div>
-        <div><h3><img src="magicians.jpg" alt="" /></h3></div>
-        <div><h3><img src="limousine.jpg" alt="" /></h3></div>
+        <div>
+          <h3>
+            <img src="dinner.jpg" alt="" />
+            <div className="reviews-content-card-star-rt">
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+              <img src="star.svg" alt="" />
+            </div>
+          </h3>
+        </div>
+        <div><h3><img src="photographer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
+        <div><h3><img src="singer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
+        <div><h3><img src="flowers.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
+        <div><h3><img src="singer.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
+        <div><h3><img src="magicians.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
+        <div><h3><img src="limousine.jpg" alt="" />  <div className="reviews-content-card-star-rt">
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+            <img src="star.svg" alt="" />
+          </div></h3></div>
       </Slider>
+      </div>
     );
   }
 }
