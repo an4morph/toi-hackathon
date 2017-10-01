@@ -2,6 +2,15 @@ import React from 'react'
 import { injectGlobal } from 'styled-components'
 import { Link } from 'react-router-dom'
 
+injectGlobal `
+ .linkks a{
+   text-align: center;
+   margin-top:40px;
+ }
+ .linkks{
+   border-bottom: 4px solid #ff7a49;
+ }
+`
 const ToastMasterCard = ({ ...props }) => {
   const item = props.location.state
   return (

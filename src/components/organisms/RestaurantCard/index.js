@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 injectGlobal`
   .restaurant-contacts img{
     width: 500px;
-    height:300px;
+    height:400px;
   }
   .lolkek{
     display:flex;
