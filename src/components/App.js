@@ -14,6 +14,57 @@ injectGlobal`
     font-family: 'Open Sans', sans-serif;
     color:#212121;
   }
+  @media screen and (max-width:1361px) {
+      .logo {
+        width: 240px;
+        max-width:240px;
+        min-width: auto;
+      }
+      .rows{
+        @media screen and (max-width:1170px) {
+            .tab {
+              width: 150px;
+              max-width:150px;
+              min-width: auto;
+            }
+            p{
+              display: none;
+            }
+          }
+        }
+        @media screen and (max-width:991px) {
+            .rows {
+              height:300px;
+              display:block;
+              .tab{
+                width: 20%;
+                max-width: 100%;
+                display: inline-block;
+                margin: 0 auto;
+              }
+              .logo{
+                width: auto;
+                max-width:900px;
+                min-width: auto;
+              }
+              p{
+                display:block;
+              }
+              @media screen and (max-width:800px) {
+                p{
+                  display:none
+                }
+              }
+              @media screen and (max-width:500px) {
+                .tab img {
+                  width: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
 `
 
 const App = () => {

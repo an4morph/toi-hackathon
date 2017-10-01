@@ -10,6 +10,7 @@ injectGlobal `
  .linkks{
    border-bottom: 4px solid #ff7a49;
  }
+ 
 `
 const ToastMasterCard = ({ ...props }) => {
   const item = props.location.state
