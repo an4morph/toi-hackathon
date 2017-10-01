@@ -128,7 +128,6 @@ class Restaurants extends React.Component {
   }
 
   render() {
-    console.log(this.state.filterShow)
     return (
       <div className="block">
         <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
@@ -160,12 +159,12 @@ class Restaurants extends React.Component {
           </div>
         </form>
         <div className="results">
-        <div className='row'>
-          {
+          <div className="row">
+            {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (
                 <div className="cards keks col-lg-6">
-                  <img src="nophoto.png" alt="" />
+                  <img src={item.photo} alt="" />
                   <div className="res-decription">
                     <h3>{item.name}</h3>
                     <div className="reviews-content-card-star-rt">
