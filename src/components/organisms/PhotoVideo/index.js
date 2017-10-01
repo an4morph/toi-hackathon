@@ -3,7 +3,10 @@ import { injectGlobal } from 'styled-components'
 // import {  Header } from 'components'
 
 injectGlobal`
-
+.kekek{
+  width:350px;
+  height:250px;
+}
 `
 
 class PhotoVideo extends React.Component {
@@ -59,10 +62,11 @@ class PhotoVideo extends React.Component {
           </div>
         </form>
         <div className="results">
+        <div className='row'>
           {
             this.props.photoVideo.map((item, index) => {
               return (<div className="cards keks col-lg-6" key={index}>
-                <img src={item.photo} alt="" />
+                <img className='kekkek' src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>
                   <div className="reviews-content-card-star-rt">
@@ -91,6 +95,7 @@ class PhotoVideo extends React.Component {
               </div>)
             })
           }
+          </div>
         </div>
       </div>
     )
