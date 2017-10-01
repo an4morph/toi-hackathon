@@ -1,5 +1,6 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
+import { Link } from 'react-router-dom'
 // import {  Header } from 'components'
 
 injectGlobal`
@@ -27,7 +28,7 @@ class ShowProgram extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchShowProgramRequest()
+    // this.props.fetchShowProgramRequest()/
   }
 
   handleShowTypeCheck(e) {
@@ -67,9 +68,10 @@ class ShowProgram extends React.Component {
           </div>
         </form>
         <div className="results">
+          <div className='row'>
           {
             this.props.showProgram.map((item, index) => {
-              return (<div className="cards pre col-lg-6">
+              return (<div key={index} className="cards pre col-lg-6">
                 <img src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>
@@ -91,7 +93,11 @@ class ShowProgram extends React.Component {
                         Телефон: {item.phone}
                     </p>
                   </div>
-                  <button>Перейти к описанию</button>
+                  <Link to={{
+                    pathname: '/showPage',
+                    state: item,
+                  }}
+                  ><button>Перейти к описанию</button></Link>
                   <div className="reviews-content-card-star crs">
                     <img src="many_icons1.svg" alt="" />
                   </div>
@@ -99,6 +105,7 @@ class ShowProgram extends React.Component {
               </div>)
             })
           }
+          </div>
         </div>
       </div>
     )

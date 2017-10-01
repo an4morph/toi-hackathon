@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Helmet from 'react-helmet'
 import { injectGlobal } from 'styled-components'
 import 'flexboxgrid/dist/flexboxgrid.min.css'
-import { HomePage, ConstructorPage, RestaurantCard } from 'components'
+import { HomePage, ConstructorPage, RestaurantCard, ToastMasterCard, ShowCard } from 'components'
 
 injectGlobal`
   html,body{
@@ -34,6 +34,8 @@ const App = () => {
         <Route path="/" component={HomePage} exact />
         <Route path="/construct" component={ConstructorPage} exact />
         <Route path="/resPage" component={RestaurantCard} exact />
+        <Route path="/toastPage" component={ToastMasterCard} exact />
+        <Route path="/showPage" component={ShowCard} exact />
       </Switch>
     </div>
   )
