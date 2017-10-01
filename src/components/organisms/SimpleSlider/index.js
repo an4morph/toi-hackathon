@@ -1,27 +1,63 @@
 import React from 'react'
 import Slider from 'react-slick'
 
+import { injectGlobal } from 'styled-components'
+
+injectGlobal`
+  h3{
+    width:300px;
+    height:250px;
+  }
+  h3 img{
+    width:300px;
+    height:250px;
+  }
+`
+
+function SampleNextArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      className={className}
+      style={{...style, display: 'block', background: 'red'}}
+      onClick={onClick}
+    ></div>
+  );
+}
+
+function SamplePrevArrow(props) {
+  const {className, style, onClick} = props
+  return (
+    <div
+      className={className}
+      style={{...style, display: 'block', background: 'green'}}
+      onClick={onClick}
+    ></div>
+  );
+}
 
 class SimpleSlider extends React.Component {
   render() {
     var settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 4,
-      slidesToScroll: 4,
+      slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
-      pauseOnHover: true
+      autoplaySpeed: 3500,
+      pauseOnHover: true,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />
     };
     return (
       <Slider {...settings}>
-        <div><h3>1</h3></div>
-        <div><h3>2</h3></div>
-        <div><h3>3</h3></div>
-        <div><h3>4</h3></div>
-        <div><h3>5</h3></div>
-        <div><h3>6</h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="nophoto.png" alt="" /></h3></div>
       </Slider>
     );
   }

@@ -58,8 +58,19 @@ injectGlobal`
       width: 65rem;
     }
   }
+  .reviews-content-card-star-rt img{
+    width:13px;
+    height:13px;
+    padding-right:20px;
+  }
   .crs{
     margin-left:0px;
+    margin-top:35px;
+  }
+  .crs img{
+    margin-left:0px;
+    width:230px;
+    height:40px;
   }
 `
 const Service = () => {
