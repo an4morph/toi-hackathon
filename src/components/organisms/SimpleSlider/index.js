@@ -52,12 +52,12 @@ class SimpleSlider extends React.Component {
     };
     return (
       <Slider {...settings}>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
-        <div><h3><img src="nophoto.png" alt="" /></h3></div>
+        <div><h3><img src="dinner.jpg" alt="" /></h3></div>
+        <div><h3><img src="photographer.jpg" alt="" /></h3></div>
+        <div><h3><img src="singer.jpg" alt="" /></h3></div>
+        <div><h3><img src="flowers.jpg" alt="" /></h3></div>
+        <div><h3><img src="magicians.jpg" alt="" /></h3></div>
+        <div><h3><img src="limousine.jpg" alt="" /></h3></div>
       </Slider>
     );
   }

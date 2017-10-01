@@ -120,7 +120,7 @@ class Restaurants extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchResRequest()
+    // this.props.fetchResRequest()
   }
 
   filterItems(data, state) {
@@ -168,8 +168,8 @@ class Restaurants extends React.Component {
                 <div className="cards keks">
                   <img src="nophoto.png" alt="" />
                   <div className="res-decription">
-                    <h3>Золотой Дракон</h3>
-                    <div className='reviews-content-card-star-rt'>
+                    <h3>{item.name}</h3>
+                    <div className="reviews-content-card-star-rt">
                       <img src="star.svg" alt="" />
                       <img src="star.svg" alt="" />
                       <img src="star.svg" alt="" />
@@ -178,17 +178,17 @@ class Restaurants extends React.Component {
                     </div>
                     <div className="kek">
                       <p>
-                        Кухня: Национальнаяб Европейская
+                        Кухня: Национальная, Европейская
                       </p>
                       <p>
-                        Сумма чека на человека: 1000 сом
+                        Сумма чека на человека: {item.sum} сом
                       </p>
                       <p>
-                        Вместимость: 100 чел
+                        Вместимость: {item.capacity} чел
                       </p>
                     </div>
                     <button>Перейти к описанию</button>
-                    <div className='reviews-content-card-star crs'>
+                    <div className="reviews-content-card-star crs">
                       <img src="many_icons1.svg" alt="" />
                     </div>
                   </div>
