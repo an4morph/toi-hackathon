@@ -11,7 +11,7 @@ import {
   Restaurants,
   ToastMasters,
   ShowProgram,
-  PhotoVideo
+  PhotoVideo,
  } from 'containers'
 
 injectGlobal`
@@ -102,6 +102,9 @@ const ConstructorPage = () => {
         </TabPanel>
         <TabPanel>
           <PhotoVideo photoVideos={[{ name: '45345' }, { name: 'fdsfbbbbbb' }]} />
+        </TabPanel>
+        <TabPanel>
+          <div>Тут пока пусто</div>
         </TabPanel>
       </Tabs>
     </PageTemplate>

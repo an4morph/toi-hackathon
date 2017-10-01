@@ -14,7 +14,6 @@ injectGlobal`
 
  .results>.cards{
    margin:45px;
-   margin-right:-100px;
  }
 `
 

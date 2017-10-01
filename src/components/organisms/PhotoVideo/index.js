@@ -40,12 +40,18 @@ class PhotoVideo extends React.Component {
     console.log(this.state)
     return (
       <div className="block">
-        <form className="filter">
-          <div className="type-block">
-            <input type="checkbox" name="photo" onChange={this.handleTypeCheck} checked={this.state.photo} />Фото
-            <input type="checkbox" name="video" onChange={this.handleTypeCheck} checked={this.state.video} />Видео
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
+          Фото/Видео
+          <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
+          <hr />
+        </div>
+        <form className={this.state.filterShow ? 'filter row' : 'filter-noShow'}>
+          <div className="type-block col-xs-6">
+            <p>Тип съемки</p>
+            <input type="checkbox" name="photo" onChange={this.handleTypeCheck} checked={this.state.photo} /><span style={{ marginRight: '20px' }}>Фото</span>
+            <input type="checkbox" name="video" onChange={this.handleTypeCheck} checked={this.state.video} /><span style={{ marginRight: '20px' }}>Видео</span>
           </div>
-          <div className="price-block">
+          <div className="price-block col-xs-6">
             <p>Цена от </p>
             <input type="number" onChange={this.handlePriceBeforeChange} value={this.state.priceBefore} />
             <p>до</p>
