@@ -98,7 +98,7 @@ class ToastMasters extends React.Component {
           {
             this.props.toastMasters.map((item, index) => {
               return (<div className="cards pre col-lg-6">
-                <img src="nophoto.png" alt="" />
+                <img src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>
                   <div className="reviews-content-card-star-rt">
@@ -110,14 +110,14 @@ class ToastMasters extends React.Component {
                   </div>
                   <div className="kek">
                     <p>
-                        Кухня: Национальнаяб Европейская
+                        Ведущий мероприятий
                       </p>
                     <p>
-                        Сумма чека на человека: 1000 сом
+                        Цена за вечер: {item.price} $
                       </p>
                     <p>
-                        Вместимость: 100 чел
-                      </p>
+                        Телефон: {item.phone}
+                    </p>
                   </div>
                   <button>Перейти к описанию</button>
                   <div className="reviews-content-card-star crs">

@@ -66,6 +66,40 @@ class ShowProgram extends React.Component {
             <input type="number" onChange={this.handlePriceAfterChange} />
           </div>
         </form>
+        <div className="results">
+          {
+            this.props.showProgram.map((item, index) => {
+              return (<div className="cards pre col-lg-6">
+                <img src={item.photo} alt="" />
+                <div className="res-decription">
+                  <h3>{item.name}</h3>
+                  <div className="reviews-content-card-star-rt">
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                  </div>
+                  <div className="kek">
+                    <p>
+                      {item.type}
+                    </p>
+                    <p>
+                        Цена за вечер: {item.price} $
+                      </p>
+                    <p>
+                        Телефон: {item.phone}
+                    </p>
+                  </div>
+                  <button>Перейти к описанию</button>
+                  <div className="reviews-content-card-star crs">
+                    <img src="many_icons1.svg" alt="" />
+                  </div>
+                </div>
+              </div>)
+            })
+          }
+        </div>
       </div>
     )
   }

@@ -43,7 +43,7 @@ class PhotoVideo extends React.Component {
     console.log(this.state)
     return (
       <div className="block">
-        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>querySelector('query')
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
           Фото/Видео
           <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
           <hr />
