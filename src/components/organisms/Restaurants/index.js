@@ -36,7 +36,7 @@ injectGlobal`
   .cards{
     font-family:open-sans;
     display:flex;
-    width:550px;
+    width:600px;
     height:300px;
   }
   .cards h3{
@@ -141,7 +141,7 @@ class Restaurants extends React.Component {
                   <img src="nophoto.png" alt="" />
                   <div className='res-decription'>
                     <h3>Золотой Дракон</h3>
-                    <div className='reviews-content-card-star crs'>
+                    <div className='reviews-content-card-star-rt'>
                       <img src="star.svg" alt="" />
                       <img src="star.svg" alt="" />
                       <img src="star.svg" alt="" />
@@ -161,11 +161,7 @@ class Restaurants extends React.Component {
                     </div>
                     <button>Перейти к описанию</button>
                     <div className='reviews-content-card-star crs'>
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
+                      <img src="many_icons1.svg" alt="" />
                     </div>
                   </div>
                 </div>
