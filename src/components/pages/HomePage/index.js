@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <PageTemplate header={<Banner />} footer={<Footer />}>
       <div className="row">
-        <div className="col-xs-12">
+        <div className="col-xs-12 col-lg-12 col-md-12">
           <SimpleSlider />
           <div className="center">
             <Link to={'/construct'}>

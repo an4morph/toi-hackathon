@@ -65,7 +65,7 @@ class PhotoVideo extends React.Component {
         <div className='row'>
           {
             this.props.photoVideo.map((item, index) => {
-              return (<div className="cards keks col-lg-6" key={index}>
+              return (<div className="cards keks col-lg-6 col-md-12 col-xs-12" key={index}>
                 <img className='kekkek' src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>

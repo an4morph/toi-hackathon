@@ -34,7 +34,6 @@ injectGlobal`
     background-color: #ffaa77;
   }
   .cards{
-    font-family:open-sans;
     display:flex;
     width:650px;
     height:300px;
@@ -164,7 +163,7 @@ class Restaurants extends React.Component {
             {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (
-                <div className="cards keks col-lg-6" key={index}>
+                <div className="cards keks col-lg-6 col-md-12 col-xs-12" key={index}>
                   <img src={item.photo} alt="" />
                   <div className="res-decription">
                     <h3>{item.name}</h3>

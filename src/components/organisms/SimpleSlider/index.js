@@ -18,7 +18,7 @@ injectGlobal`
   }
   .reviews-content-card-star-rt{
     display:flex;
-    justify-content: center;
+    justify-content: left;
     padding-top:10px;
   }
   .slick-slider{
@@ -72,7 +72,7 @@ class SimpleSlider extends React.Component {
       prevArrow: <SamplePrevArrow />
     };
     return (
-      <div className='container-m'>
+      <div className='container'>
       <Slider {...settings}>
         <div>
           <h3>
