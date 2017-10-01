@@ -37,7 +37,7 @@ const Banner = () => {
   return (
     <div className='header'>
       <div className='header-text'>
-        <img src="logo.svg" alt="" />
+        <img src="toimaster_raw.svg" alt="" />
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi

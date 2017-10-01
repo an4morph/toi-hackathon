@@ -50,10 +50,16 @@ injectGlobal`
   .left{
     text-align:left;
   }
+  hr{
+    border-color:black;
+  }
   @media only screen and (min-width: 75em){
     .container {
       width: 65rem;
     }
+  }
+  .crs{
+    margin-left:0px;
   }
 `
 const Service = () => {

@@ -11,6 +11,9 @@ injectGlobal`
   padding-top:20px;
   padding-bottom: 50px;
 }
+.center p {
+  padding-top:30px;
+}
 .header-center{
   margin-bottom: 100px;
   text-align: center;
