@@ -15,6 +15,7 @@ injectGlobal`
     color:#212121;
   }
   @media screen and (max-width:1361px) {
+
       .logo {
         width: 240px;
         max-width:240px;
