@@ -6,6 +6,7 @@ import {
   Header,
   Footer,
 } from 'components'
+import { Link } from 'react-router-dom'
 
 import {
   Restaurants,
@@ -67,7 +68,7 @@ const ConstructorPage = () => {
       <Tabs selectedTabClassName="active-tab">
         <TabList className="rows">
           <div className="col-xs-3 logo">
-            <img src="toimaster_small.svg" alt="" />
+            <Link to="/"><img src="toimaster_small.svg" alt="" /></Link>
           </div>
           <Tab className="col-xs-3 tab">
             <p>Рестораны</p>
