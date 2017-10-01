@@ -3,11 +3,11 @@ import { injectGlobal } from 'styled-components'
 
 injectGlobal`
   .filter {
-    background-color: #ff5e4b;
+    background-color: #fff!important;
+    margin-left: 50px;
     padding: 20px;
   }
   input {
-    border: none;
     padding: 3px;
     font-size: 14px;
   }
@@ -21,17 +21,63 @@ injectGlobal`
   select {
     height: 20px;
   }
-  .capacity-block, .name-block {
+  .capacity-block, .name-block, .price-block{
     display: inline-block;
-    margin-right: 100px;
   }
   .price-block {
     margin-top: 20px;
-    align-items: flex-end;
+    align-items: flex-start;
     display: flex;
   }
   .results {
     background-color: #ffaa77;
+  }
+  .cards{
+    font-family:open-sans;
+    display:flex;
+    width:600px;
+    height:300px;
+  }
+  .cards h3{
+    font-size:26px;
+  }
+  .cards img{
+    padding-right:40px;
+    width:370px;
+    height:300px;
+  }
+  .res-decription{
+    width:300px;
+    font-size:14px;
+  }
+  .res-decription img{
+    width:13px;
+    height:13px;
+    padding-right:20px;
+  }
+  button{
+    padding:5px 30px 5px 30px;
+  }
+  .kek{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+  .head-pead {
+    display: block;
+  }
+  .filter-noShow {
+    display: none;
+  }
+  .head-pead {
+    cursor: pointer;
+    font-size: 22px;
+    font-style: normal!important;
+    font-weight: 600;
+    font-family: Arial;
+    margin-left: 50px;
+  }
+  .head-pead hr {
+    border: 1px solid rgba(0,0,0,.5);
   }
 `
 
@@ -43,6 +89,7 @@ class Restaurants extends React.Component {
       capacity: 'Любое',
       priceBefore: '',
       priceAfter: '',
+      filterShow: false,
     }
     this.handleNameChange = this.handleNameChange.bind(this)
     this.handleCapacityChange = this.handleCapacityChange.bind(this)
@@ -77,15 +124,20 @@ class Restaurants extends React.Component {
   }
 
   render() {
-    console.log(this.state.priceBefore)
+    console.log(this.state.filterShow)
     return (
       <div className="block">
-        <form className="filter">
-          <div className="name-block">
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
+          Рестораны
+          <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
+          <hr />
+        </div>
+        <form className={this.state.filterShow ? 'filter row' : 'filter-noShow'}>
+          <div className="name-block col-xs-4">
             <p>Имя ресторана</p>
             <input placeholder="имя ресторана" onChange={this.handleNameChange} />
           </div>
-          <div className="capacity-block">
+          <div className="capacity-block col-xs-4">
             <p>Количество гостей</p>
             <select onChange={this.handleCapacityChange}>
               <option>Любое</option>
@@ -96,7 +148,7 @@ class Restaurants extends React.Component {
               <option>500</option>
             </select>
           </div>
-          <div className="price-block">
+          <div className="price-block col-xs-4">
             <p>Цена от </p>
             <input type="number" onChange={this.handlePriceBeforeChange} />
             <p>до</p>
@@ -106,10 +158,36 @@ class Restaurants extends React.Component {
         <div className="results">
           {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
-              return (<div key={index}>
-                <h3>{item.name}</h3>
-                тут картинка
-              </div>)
+              return (
+                <div className="cards">
+                  <img src="nophoto.png" alt="" />
+                  <div className="res-decription">
+                    <h3>Золотой Дракон</h3>
+                    <div className='reviews-content-card-star-rt'>
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                    </div>
+                    <div className="kek">
+                      <p>
+                        Кухня: Национальнаяб Европейская
+                      </p>
+                      <p>
+                        Сумма чека на человека: 1000 сом
+                      </p>
+                      <p>
+                        Вместимость: 100 чел
+                      </p>
+                    </div>
+                    <button>Перейти к описанию</button>
+                    <div className='reviews-content-card-star crs'>
+                      <img src="many_icons1.svg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              )
             })
           }
         </div>

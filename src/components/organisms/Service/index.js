@@ -11,6 +11,9 @@ injectGlobal`
   padding-top:20px;
   padding-bottom: 50px;
 }
+.center p {
+  padding-top:30px;
+}
 .header-center{
   margin-bottom: 100px;
   text-align: center;
@@ -36,6 +39,10 @@ injectGlobal`
   text-align: center;
   max-width: 250px;
   margin: 0 auto;
+  font-family: Open-sans;
+}
+p{
+  font-size:17px;
 }
 img{
   width:100px;
@@ -53,7 +60,7 @@ const Service = () => {
           <div className='col-xs-12 col-sm-4 col-lg-4 card'>
             <div className='center'>
               <img src="icon1.svg" alt="" />
-              <h4>Секономим время</h4>
+              <p>Секономим время</p>
             </div>
             <div className="decription">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -63,7 +70,7 @@ const Service = () => {
           <div className='col-xs-12 col-sm-4 col-lg-4 card'>
             <div className='center'>
               <img src="icon2.svg" alt="" />
-              <h4>Информация со всего Кыргызстана</h4>
+              <p>Информация со всего Кыргызстана</p>
             </div>
             <div className="decription">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -73,7 +80,7 @@ const Service = () => {
           <div className='col-xs-12 col-sm-4 col-lg-4 card'>
             <div className='center'>
               <img src="icon3.svg" alt="" />
-              <h4>Еще одня иконка</h4>
+              <p>Еще одня иконка</p>
             </div>
             <div className="decription">
                Lorem ipsum dolor sit amet, consectetur adipisicing elit,

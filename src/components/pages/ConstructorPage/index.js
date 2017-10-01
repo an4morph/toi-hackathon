@@ -16,11 +16,25 @@ import {
 
 injectGlobal`
   .tab {
-    padding: 20px;
-    height: 45px;
+    width:auto;
+    height:auto;
+    max-width:220px;
+    min-width:100px;
+    text-align:center;
+    padding-top:40px;
   }
   .tab:hover {
     cursor: pointer;
+  }
+  .rows{
+    padding:0;
+    padding-bottom:100px;
+    height:125px;
+    display:flex;
+  }
+  .tab img{
+    height:30px;
+    padding:10px;
   }
   ul{
     padding: 0;
@@ -30,26 +44,50 @@ injectGlobal`
     list-style: none;
   }
   .active-tab {
-    background-color: #ff5e4b;
+    border-bottom:4px solid #ff7a49;
+    transition:all 0.6s;
+  }
+  .logo img{
+    padding:7px;
+    width:auto;
+    height:100px;
+  }
+  .logo{
+    text-align:center;
+    background-color:#ff7a49;
+    max-width:300px;
+    min-width:300px;
+    height:125px;
   }
 `
 
 const ConstructorPage = () => {
   return (
-    <PageTemplate header={<Header />} footer={<Footer />}>
+    <PageTemplate footer={<Footer />}>
       <Tabs selectedTabClassName="active-tab">
-        <TabList className="row">
+        <TabList className="rows">
+          <div className="col-xs-3 logo">
+            <img src="toimaster_small.svg" alt="" />
+          </div>
           <Tab className="col-xs-3 tab">
-            Рестораны
+            <p>Рестораны</p>
+            <img src="restaurants_icon.svg" alt="" />
           </Tab>
           <Tab className="col-xs-3 tab">
-            Ведущие
+            <p>Ведущие</p>
+            <img src="showmen_icon.svg" alt="" />
           </Tab>
           <Tab className="col-xs-3 tab">
-            Шоу программа
+            <p>Шоу-программа</p>
+            <img src="shows_icon.svg" alt="" />
           </Tab>
           <Tab className="col-xs-3 tab">
-            Фото Видео
+            <p>Фото/Видеосьемка</p>
+            <img src="videos_icon.svg" alt="" />
+          </Tab>
+          <Tab className="col-xs-3 tab">
+            <p>Прочее</p>
+            <img src="other_icon.svg" alt="" />
           </Tab>
         </TabList>
 
