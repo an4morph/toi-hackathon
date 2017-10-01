@@ -1,5 +1,6 @@
 import React from 'react'
-import { injectGlobal} from 'styled-components'
+import { injectGlobal } from 'styled-components'
+import { Link } from 'react-router-dom'
 
 injectGlobal`
   .restaurant-contacts img{
@@ -51,71 +52,71 @@ injectGlobal`
 const RestaurantCard = ({ ...props }) => {
   const item = props.location.state
   return (
-  <div>
-    <div className='rep'>
-      <div className='logo'>
-        <img src='toimaster_small.svg' />
-      </div>
-      <div className='linkks'>
-          <a href='/'>
+    <div>
+      <div className="rep">
+        <div className="logo">
+          <img src="toimaster_small.svg" />
+        </div>
+        <div className="linkks">
+          <Link to={{ pathname: 'construct', state: 0 }}>
             <p>Рестораны</p>
             <img src="restaurants_icon.svg" alt="" />
-          </a>
-          <a href='/'>
+          </Link>
+          <Link to={{ pathname: 'construct', state: 1 }}>
             <p>Ведущие</p>
             <img src="showmen_icon.svg" alt="" />
-          </a>
-          <a href='/'>
+          </Link>
+          <Link to={{ pathname: 'construct', state: 2 }}>
             <p>Шоу-программа</p>
             <img src="shows_icon.svg" alt="" />
-          </a>
-          <a href='/'>
+          </Link>
+          <Link to={{ pathname: 'construct', state: 3 }}>
             <p>Фото/Видеосьемка</p>
             <img src="videos_icon.svg" alt="" />
-          </a>
-          <a href='/'>
+          </Link>
+          <Link to={{ pathname: 'construct', state: 4 }}>
             <p>Прочее</p>
             <img src="other_icon.svg" alt="" />
-          </a>
-      </div>
-    </div>
-    <div className='container'>
-      <div className="restaurant-card">
-        <div className='lolkek'>
-          <h1>{item.name}</h1>
-          <div className='header-content'>
-            <div className="reviews-content-card-star-rt">
-              <img src="star.svg" alt="" />
-              <img src="star.svg" alt="" />
-              <img src="star.svg" alt="" />
-              <img src="star.svg" alt="" />
-              <img src="star.svg" alt="" />
-            </div>
-            <p>11 отзывов</p>
-          </div>
+          </Link>
         </div>
-        <hr></hr>
-        <div className="restaurant-contacts row">
-          <div className='col-lg-6'>
-            <p>Кухня: Национальная, европейская</p>
+      </div>
+      <div className="container">
+        <div className="restaurant-card">
+          <div className="lolkek">
+            <h1>{item.name}</h1>
+            <div className="header-content">
+              <div className="reviews-content-card-star-rt">
+                <img src="star.svg" alt="" />
+                <img src="star.svg" alt="" />
+                <img src="star.svg" alt="" />
+                <img src="star.svg" alt="" />
+                <img src="star.svg" alt="" />
+              </div>
+              <p>11 отзывов</p>
+            </div>
+          </div>
+          <hr />
+          <div className="restaurant-contacts row">
+            <div className="col-lg-6">
+              <p>Кухня: Национальная, европейская</p>
             Телефон: {item.phone}
               <br />
             Адрес:{item.address}
+            </div>
+            <div className="col-lg-6">
+              <img src={item.photo} alt="" />
+            </div>
           </div>
-          <div className='col-lg-6'>
-            <img src={item.photo} alt="" />
+          <div className="restaurant-desc">
+            <div>
+              <h2>Описание</h2>
+            </div>
+            <hr />
+            {item.description}
           </div>
-        </div>
-        <div className="restaurant-desc">
-          <div>
-            <h2>Описание</h2>
-          </div>
-          <hr></hr>
-          {item.description}
         </div>
       </div>
     </div>
-  </div>
   )
 }
 

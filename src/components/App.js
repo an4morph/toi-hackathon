@@ -20,8 +20,8 @@ const App = () => {
   return (
     <div>
       <Helmet titleTemplate="ARc - %s">
-        <title>Atomic React</title>
-        <meta name="description" content="React starter kit based on Atomic Design with React Router v4, Webpack, Redux, Server Side Rendering and more." />
+        <title>Toimaster</title>
+        <meta name="description" content="Устрой свой идеальный праздник" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta property="og:site_name" content="ARc" />
         <meta property="og:image" content="https://arc.js.org/thumbnail.png" />

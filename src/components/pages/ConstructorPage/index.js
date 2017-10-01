@@ -62,6 +62,7 @@ injectGlobal`
   }
 `
 
+<<<<<<< HEAD
 const ConstructorPage = () => {
   return (
     <PageTemplate footer={<Footer />}>
@@ -91,25 +92,64 @@ const ConstructorPage = () => {
             <img src="other_icon.svg" alt="" />
           </Tab>
         </TabList>
+=======
+class ConstructorPage extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { select: 0 }
+  }
 
-        <TabPanel>
-          <Restaurants />
-        </TabPanel>
-        <TabPanel>
-          <ToastMasters />
-        </TabPanel>
-        <TabPanel>
-          <ShowProgram />
-        </TabPanel>
-        <TabPanel>
-          <PhotoVideo />
-        </TabPanel>
-        <TabPanel>
-          <div>Тут пока пусто</div>
-        </TabPanel>
-      </Tabs>
-    </PageTemplate>
-  )
+  render() {
+    // console.log(this.state, this.props.location.state)
+    return (
+      <PageTemplate footer={<Footer />}>
+        <Tabs selectedTabClassName="active-tab" defaultIndex={this.props.location.state || 0}>
+          <TabList className="rows">
+            <div className="col-xs-3 logo">
+              <Link to="/"><img src="toimaster_small.svg" alt="" /></Link>
+            </div>
+            <Tab className="col-xs-3 tab">
+              <p>Рестораны</p>
+              <img src="restaurants_icon.svg" alt="" />
+            </Tab>
+            <Tab className="col-xs-3 tab">
+              <p>Ведущие</p>
+              <img src="showmen_icon.svg" alt="" />
+            </Tab>
+            <Tab className="col-xs-3 tab">
+              <p>Шоу-программа</p>
+              <img src="shows_icon.svg" alt="" />
+            </Tab>
+            <Tab className="col-xs-3 tab">
+              <p>Фото/Видеосьемка</p>
+              <img src="videos_icon.svg" alt="" />
+            </Tab>
+            <Tab className="col-xs-3 tab">
+              <p>Прочее</p>
+              <img src="other_icon.svg" alt="" />
+            </Tab>
+          </TabList>
+>>>>>>> 33390711dddaaa42fa23909122fd47c1413e0aaa
+
+          <TabPanel>
+            <Restaurants />
+          </TabPanel>
+          <TabPanel>
+            <ToastMasters />
+          </TabPanel>
+          <TabPanel>
+            <ShowProgram />
+          </TabPanel>
+          <TabPanel>
+            <PhotoVideo />
+          </TabPanel>
+          <TabPanel>
+            <div>Тут пока пусто</div>
+          </TabPanel>
+        </Tabs>
+      </PageTemplate>
+    )
+  }
 }
 
 ConstructorPage.propTypes = {}
