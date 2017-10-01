@@ -82,8 +82,6 @@ injectGlobal`
     border: 1px solid rgba(0,0,0,.5);
   }
   .keks{
-    margin:45px;
-    margin-left:53px;
   }
 `
 
@@ -162,10 +160,11 @@ class Restaurants extends React.Component {
           </div>
         </form>
         <div className="results">
+        <div className='row'>
           {
             this.filterItems(this.props.restaurants, this.state).map((item, index) => {
               return (
-                <div className="cards keks">
+                <div className="cards keks col-lg-6">
                   <img src="nophoto.png" alt="" />
                   <div className="res-decription">
                     <h3>{item.name}</h3>
@@ -196,6 +195,7 @@ class Restaurants extends React.Component {
               )
             })
           }
+          </div>
         </div>
       </div>
     )
