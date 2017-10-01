@@ -40,7 +40,7 @@ class PhotoVideo extends React.Component {
     console.log(this.state)
     return (
       <div className="block">
-        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>
+        <div className="head-pead" onClick={e => this.setState({ filterShow: !this.state.filterShow })}>querySelector('query')
           Фото/Видео
           <span style={{ float: 'right', fontSize: '14px', marginTop: '14px', marginRight: '50px' }}>Фильтровать по &#9660;</span>
           <hr />
@@ -61,9 +61,33 @@ class PhotoVideo extends React.Component {
         <div className="results">
           {
             this.props.photoVideo.map((item, index) => {
-              return (<div key={index}>
-                <h3>{item.name}</h3>
-                тут картинка
+              return (<div className="cards keks col-lg-6" key={index}>
+                <img src={item.photo} alt="" />
+                <div className="res-decription">
+                  <h3>{item.name}</h3>
+                  <div className="reviews-content-card-star-rt">
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                  </div>
+                  <div className="kek">
+                    <p>
+                      Фотограф
+                    </p>
+                    <p>
+                      Сумма за съемку: {item.price} $
+                    </p>
+                    <p>
+                      Телефон: {item.phone}
+                    </p>
+                  </div>
+                  <button>Перейти к описанию</button>
+                  <div className="reviews-content-card-star crs">
+                    <img src="many_icons1.svg" alt="" />
+                  </div>
+                </div>
               </div>)
             })
           }
