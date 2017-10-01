@@ -1,5 +1,6 @@
 import React from 'react'
 import { injectGlobal } from 'styled-components'
+import { Link } from 'react-router-dom'
 // import {  Header } from 'components'
 
 injectGlobal`
@@ -119,7 +120,13 @@ class ToastMasters extends React.Component {
                         Телефон: {item.phone}
                     </p>
                   </div>
-                  <button>Перейти к описанию</button>
+                  <Link to={{
+                    pathname: '/toastPage',
+                    state: item,
+                  }}
+                  >
+                    <button>Перейти к описанию</button>
+                  </Link>
                   <div className="reviews-content-card-star crs">
                     <img src="many_icons1.svg" alt="" />
                   </div>
