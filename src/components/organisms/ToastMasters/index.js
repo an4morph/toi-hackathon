@@ -96,35 +96,35 @@ class ToastMasters extends React.Component {
         </form>
         <div className="results">
           {
-            this.props.toastmasters.map((item, index) => {
+            this.props.toastMasters.map((item, index) => {
               return (<div className="cards pre col-lg-6">
-                  <img src="nophoto.png" alt="" />
-                  <div className="res-decription">
-                    <h3>Золотой Дракон</h3>
-                    <div className='reviews-content-card-star-rt'>
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                      <img src="star.svg" alt="" />
-                    </div>
-                    <div className="kek">
-                      <p>
+                <img src="nophoto.png" alt="" />
+                <div className="res-decription">
+                  <h3>{item.name}</h3>
+                  <div className="reviews-content-card-star-rt">
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                    <img src="star.svg" alt="" />
+                  </div>
+                  <div className="kek">
+                    <p>
                         Кухня: Национальнаяб Европейская
                       </p>
-                      <p>
+                    <p>
                         Сумма чека на человека: 1000 сом
                       </p>
-                      <p>
+                    <p>
                         Вместимость: 100 чел
                       </p>
-                    </div>
-                    <button>Перейти к описанию</button>
-                    <div className='reviews-content-card-star crs'>
-                      <img src="many_icons1.svg" alt="" />
-                    </div>
                   </div>
-                </div>)
+                  <button>Перейти к описанию</button>
+                  <div className="reviews-content-card-star crs">
+                    <img src="many_icons1.svg" alt="" />
+                  </div>
+                </div>
+              </div>)
             })
           }
         </div>
