@@ -3,7 +3,7 @@ export function fetchPhotoVideoRequest() {
     type: 'FETCH_PHOTOVIDEO_REQUEST'
   }
 }
-export function fetchPhotoSVideouccess(response) {
+export function fetchPhotoVideoSuccess(response) {
   return {
     type: 'FETCH_PHOTOVIDEO_SUCCESS',
     payload: {response}
