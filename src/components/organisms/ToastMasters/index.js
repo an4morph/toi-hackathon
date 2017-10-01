@@ -14,8 +14,8 @@ injectGlobal`
  }
 
  .pre{
-   margin:45px;
-   margin-right:-39px;
+
+
    transition:all 1s;
 
  }
@@ -59,7 +59,7 @@ class ToastMasters extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchToastMastersRequest()
+    // this.props.fetchToastMastersRequest()
   }
 
   filterItems(data, state) {
@@ -95,9 +95,10 @@ class ToastMasters extends React.Component {
           </div>
         </form>
         <div className="results">
+          <div className='row'>
           {
             this.props.toastMasters.map((item, index) => {
-              return (<div className="cards pre col-lg-6">
+              return (<div key={index} className="cards pre col-lg-6">
                 <img src={item.photo} alt="" />
                 <div className="res-decription">
                   <h3>{item.name}</h3>
@@ -128,6 +129,7 @@ class ToastMasters extends React.Component {
             })
           }
         </div>
+       </div>
       </div>
     )
   }
