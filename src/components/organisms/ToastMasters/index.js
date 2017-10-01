@@ -3,7 +3,19 @@ import { injectGlobal } from 'styled-components'
 // import {  Header } from 'components'
 
 injectGlobal`
+ .results{
+   display: flex;
+   height:auto;
+   min-height:1000px;
+ }
+ .results h3{
+   height:50px;
+ }
 
+ .results>.cards{
+   margin:45px;
+   margin-right:-100px;
+ }
 `
 
 class ToastMasters extends React.Component {
@@ -79,10 +91,34 @@ class ToastMasters extends React.Component {
         <div className="results">
           {
             this.props.toastmasters.map((item, index) => {
-              return (<div key={index}>
-                <h3>{item.name}</h3>
-                тут картинка
-              </div>)
+              return (<div className="cards col-lg-6">
+                  <img src="nophoto.png" alt="" />
+                  <div className="res-decription">
+                    <h3>Золотой Дракон</h3>
+                    <div className='reviews-content-card-star-rt'>
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                      <img src="star.svg" alt="" />
+                    </div>
+                    <div className="kek">
+                      <p>
+                        Кухня: Национальнаяб Европейская
+                      </p>
+                      <p>
+                        Сумма чека на человека: 1000 сом
+                      </p>
+                      <p>
+                        Вместимость: 100 чел
+                      </p>
+                    </div>
+                    <button>Перейти к описанию</button>
+                    <div className='reviews-content-card-star crs'>
+                      <img src="many_icons1.svg" alt="" />
+                    </div>
+                  </div>
+                </div>)
             })
           }
         </div>
